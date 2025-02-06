@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "useGitignore": true,
+  "ignorePaths": [
+    ".cspell.json",
+    ".devcontainer/",
+    ".github/",
+    ".vscode/",
+    "rust-toolchain.toml"
+  ],
+  "words": [
+    "clippy",
+    "humantime",
+    "oneshot",
+    "rustlang",
+    "rustup"
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.md",
+      "dictionaries": [
+        "rust"
+      ]
+    }
+  ]
+}
