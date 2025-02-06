@@ -10,6 +10,8 @@
     "rust-toolchain.toml"
   ],
   "words": [
+    "anstream",
+    "anstyle",
     "clippy",
     "humantime",
     "oneshot",
