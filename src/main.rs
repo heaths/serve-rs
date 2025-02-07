@@ -9,6 +9,7 @@ use clap::{
 };
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::{rt::TokioIo, server::graceful::GracefulShutdown};
+use serve::Size;
 use std::{fmt, io::Write as _, net::SocketAddr, pin::pin, time::Duration};
 use tokio::{net::TcpListener, time};
 
@@ -89,6 +90,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 #[derive(Debug, Parser)]
 #[command(author, version, styles = CLAP_V3_STYLES)]
 struct Args {
+    /// The size of blocks of the response to send e.g., "32kb", "1 mib", etc.
+    ///
+    /// Supports bytes ("b") through petabytes ("pb") and pebibytes ("pib").
+    #[arg(short = 'b', long)]
+    pub block_size: Option<Size>,
+
     /// When to show color output.
     #[arg(long, default_value_t = ColorChoice::default())]
     pub color: ColorChoice,
