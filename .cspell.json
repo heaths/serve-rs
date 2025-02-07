@@ -10,17 +10,40 @@
     "rust-toolchain.toml"
   ],
   "words": [
+    "anstream",
+    "anstyle",
     "clippy",
     "humantime",
     "oneshot",
     "rustlang",
     "rustup"
   ],
+  "dictionaryDefinitions": [
+    {
+      "name": "crates",
+      "words": [
+        "colorchoice"
+      ],
+      "noSuggest": true
+    }
+  ],
   "overrides": [
+    {
+      "filename": "Cargo.toml",
+      "dictionaries": [
+        "crates"
+      ]
+    },
     {
       "filename": "**/*.md",
       "dictionaries": [
         "rust"
+      ]
+    },
+    {
+      "filename": "**/*.rs",
+      "dictionaries": [
+        "crates"
       ]
     }
   ]

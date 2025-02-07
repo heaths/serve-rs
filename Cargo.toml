@@ -7,9 +7,24 @@ description = "Serves HTTP requests in simulated conditions"
 publish = false
 
 [dependencies]
+anstream = "0.6.18"
+anstyle = "1.0.10"
 bytes = "1.10.0"
-clap = { version = "4.5.28", features = ["derive"] }
+clap = { version = "4.5.28", features = ["color", "derive"] }
+colorchoice = "1.0.3"
 humantime = "2.1.0"
 hyper = { version = "1.6.0", features = ["http1", "server"] }
-hyper-util = { version = "0.1.10", features = ["http1", "server", "server-graceful", "tokio"] }
-tokio = { version = "1.43.0", features = ["fs", "macros", "net", "rt-multi-thread", "signal", "time"] }
+hyper-util = { version = "0.1.10", features = [
+    "http1",
+    "server",
+    "server-graceful",
+    "tokio",
+] }
+tokio = { version = "1.43.0", features = [
+    "fs",
+    "macros",
+    "net",
+    "rt-multi-thread",
+    "signal",
+    "time",
+] }
